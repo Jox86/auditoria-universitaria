@@ -1,0 +1,23 @@
+{
+  "descripcion": "Equivalencias de cuentas contables a rubros de auditoría",
+  "rubros": {
+    "1": "Activo",
+    "2": "Pasivo",
+    "3": "Patrimonio",
+    "4": "Ingresos",
+    "5": "Gastos de personal",
+    "6": "Bienes y servicios",
+    "7": "Transferencias",
+    "8": "Inversión"
+  },
+  "cuentas": {
+    "5101": "Sueldos y salarios",
+    "5102": "Contribuciones sociales",
+    "6101": "Materiales y suministros",
+    "6102": "Servicios básicos",
+    "6103": "Mantenimiento",
+    "6104": "Viáticos",
+    "7101": "Becas y ayudas",
+    "8101": "Equipamiento"
+  }
+}

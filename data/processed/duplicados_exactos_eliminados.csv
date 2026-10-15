@@ -1,0 +1,2 @@
+﻿Facultad,Centro_Costo,Cuenta,Descripcion,Debe,Haber,Fecha,Tipo_Transaccion,Numero_Documento,Archivo_Origen,Fecha_Hora
+Ciencias_Economicas,ECO-POS,5101,Sueldos y salarios,0.0,1490.0,2026-03-12,Compra,COM-00001,EJEMPLO_DATOS.csv,2026-03-12 14:55:00

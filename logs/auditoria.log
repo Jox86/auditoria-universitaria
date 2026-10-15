@@ -1,0 +1,8 @@
+2026-10-15 12:03:53,370 INFO ejecutar_analisis: 1/6 Ingesta
+2026-10-15 12:03:53,416 INFO src.ingesta: Ingesta: 613 filas leídas, 0 descartadas
+2026-10-15 12:03:53,455 INFO ejecutar_analisis: 2/6 Limpieza
+2026-10-15 12:03:53,562 INFO ejecutar_analisis: 3/6 Resumen por categoría
+2026-10-15 12:03:53,608 INFO ejecutar_analisis: 4/6 Anomalías
+2026-10-15 12:03:53,714 INFO ejecutar_analisis: 5/6 Estadística
+2026-10-15 12:03:55,764 INFO ejecutar_analisis: 6/6 Muestreo (mum)
+2026-10-15 12:03:55,776 INFO ejecutar_analisis: Análisis completo: {'processed': 'E:\\!\\auditoria_universitaria\\auditoria_universitaria\\data\\processed', 'filas': 612, 'muestra': 135}

@@ -1,0 +1,67 @@
+# Configuración del sistema de auditoría universitaria
+# Todas las rutas son relativas a la raíz del proyecto.
+
+rutas:
+  raw: data/raw
+  processed: data/processed
+  informes: data/informes
+  logs: logs
+
+columnas_obligatorias:
+  - Facultad
+  - Centro_Costo
+  - Cuenta
+  - Descripcion
+  - Debe
+  - Haber
+  - Fecha
+  - Tipo_Transaccion
+  - Numero_Documento
+
+# Columna opcional adicional
+columna_area: Area_Administrativa
+
+anomalias:
+  z_score_umbral: 3.0
+  iqr_factor: 1.5
+  hora_inusual_inicio: 20     # transacciones a partir de esta hora
+  hora_inusual_fin: 6         # y hasta esta hora se marcan como inusuales
+  monto_redondo_multiplo: 1000
+  monto_redondo_minimo: 5000
+  umbrales_aprobacion: [10000, 50000]
+  margen_bajo_umbral: 0.03    # 3 % por debajo del umbral
+  gap_min_secuencia: 5        # mínimo de documentos numéricos para evaluar saltos
+
+muestreo:
+  nivel_confianza: 0.95
+  error_tolerable: 50000.0
+  error_esperado: 5000.0
+  semilla: 42
+  rangos_monto: [0, 1000, 5000, 20000, 100000]
+
+estadistica:
+  alfa: 0.05
+  antiguedad_bins_dias: [0, 30, 60, 90, 180, 365]
+
+opencode:
+  model: "ollama/qwen3-coder"
+  permission:
+    bash: allow
+    edit: allow
+  timeout_s: 600
+  comando: opencode
+
+programacion:
+  hora_diaria: "02:00"
+
+# Auditorías automatizadas de sitios Moodle (páginas 6 y 7 de la interfaz)
+auditorias:
+  sitio_predeterminado: "https://evea.uh.cu"   # el script de prueba real usa siempre este sitio
+  ruta_login: "/login/index.php"
+  servicio_ws: "moodle_mobile_app"
+  timeout_s: 30
+  # Topes para no saturar sitios grandes (el informe lo declara si se alcanzan)
+  max_cursos: 200
+  max_usuarios: 5000
+  max_paginas: 50
+  max_roles: 20

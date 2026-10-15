@@ -1,0 +1,13 @@
+{
+  "archivos": [
+    {
+      "archivo": "EJEMPLO_DATOS.csv",
+      "leidas": 613,
+      "descartadas": 0,
+      "error": null
+    }
+  ],
+  "filas_leidas": 613,
+  "filas_descartadas": 0,
+  "errores": {}
+}
